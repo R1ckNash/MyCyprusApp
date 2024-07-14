@@ -35,22 +35,3 @@ struct Restaurant: Decodable {
     }
 }
 
-
-
-//{
-//            "id": 2361,
-//            "name": "LEDRAHAN",
-//            "photo": "https://api.mycyprus.app/media/organizations/1_BV88ANE.JPG",
-//            "rate": null,
-//            "averageCheck": [],
-//            "cuisines": [
-//                "Mediterranean",
-//                "Grill",
-//                "Fast Food",
-//                "Steakhouse",
-//                "Diner",
-//                "Barbecue"
-//            ],
-//            "isFavorite": false,
-//            "distance": null
-//        },
