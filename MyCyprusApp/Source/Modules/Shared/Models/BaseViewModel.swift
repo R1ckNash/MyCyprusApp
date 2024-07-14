@@ -11,6 +11,9 @@ import Combine
 @MainActor
 class BaseViewModel {
     
+    //MARK: - Publishers
+    @Published var activity: Bool = false
+    
     //MARK: - Properties
     private(set) var screenModel: ScreenViewModel
     
@@ -20,7 +23,7 @@ class BaseViewModel {
     var api: Api {
         Api.shared
     }
-    
+
     //MARK: - Life cycle
     init() {
         screenModel = .init()
@@ -40,8 +43,40 @@ class BaseViewModel {
     }
     
     //MARK: - Actions
-    func load() async {
+    func load() async -> Bool {
+        await startLoadingAsync()
+        let result = await loading()
+        await stopLoadingAsync()
         
+        return result
+    }
+    
+    func loading() async -> Bool {
+        return true
+    }
+    
+    func startLoading() {
+        activity = true
+        
+        #if DEBUG
+        print("StartLoading")
+        #endif
+    }
+    
+    func startLoadingAsync() async {
+        startLoading()
+    }
+    
+    func stopLoading() {
+        activity = false
+        
+        #if DEBUG
+        print("StopLoading")
+        #endif
+    }
+    
+    func stopLoadingAsync() async {
+        stopLoading()
     }
     
     

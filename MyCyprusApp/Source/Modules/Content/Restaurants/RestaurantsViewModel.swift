@@ -11,6 +11,15 @@ final class RestaurantsViewModel: BaseViewModel, ObservableObject {
     
     //MARK: - Publishers
     @Published var restaurants: [Restaurant] = []
+    
+    //MARK: - Overrides
+    override func loading() async -> Bool {
+        let result = await super.loading()
+        
+        let success = await self.restaurants()
+        
+        return result && success
+    }
 }
 
 // MARK: - Requests

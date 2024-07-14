@@ -12,25 +12,73 @@ struct RestaurantsView: View {
     @ObservedObject var model: RestaurantsViewModel
     
     var body: some View {
-        ScreenView(model: model.screenModel) {
-            ScrollView {
-                LazyVStack {
-                    ForEach(model.restaurants, id: \.id) { item in
-                        RestaurantItemView()
+        NavigationStack {
+            ScreenView(model: model.screenModel) {
+                ScrollView {
+                    if model.activity {
+                        HStack {
+                            Spacer()
+                            ProgressView()
+                                .progressViewStyle(.circular)
+                                .frame(width: 150, height: 150)
+                            Spacer()
+                        }
+                    } else {
+                        LazyVStack {
+                            ForEach(model.restaurants, id: \.id) { item in
+                                RestaurantItemView(item: item)
+                            }
+                        }
+                    }
+                }
+                .navigationTitle("Restaurants")
+                .navigationBarTitleDisplayMode(.inline)
+                .background {
+                    Color(uiColor: .systemGroupedBackground)
+                        .ignoresSafeArea()
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "heart.fill")
+                            .foregroundStyle(.blue)
                     }
                 }
             }
-            .navigationTitle("Restaurants")
-            .navigationBarTitleDisplayMode(.inline)
-        }
-        .onAppear {
-            Task {
-               await model.load()
+            .onAppear {
+                Task {
+                    await model.load()
+                }
             }
         }
     }
 }
 
-//#Preview {
-//    RestaurantsView()
-//}
+#if DEBUG
+struct RestaurantsView_PreviewView: View {
+    @StateObject var model: RestaurantsViewModel = {
+        let model = RestaurantsViewModel()
+        
+        return model
+    }()
+
+    var body: some View {
+        NavigationStack {
+            RestaurantsView(model: model)
+                .onAppear {
+                    Task {
+                        await self.model.load()
+                    }
+                }
+        }
+        
+    }
+}
+
+#Preview {
+    RestaurantsView_PreviewView()
+}
+#endif

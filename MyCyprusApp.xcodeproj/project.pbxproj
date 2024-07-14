@@ -221,9 +221,9 @@
 		9B4C8CF62C4405A0003AFD26 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9B4C8CFB2C440C8B003AFD26 /* BaseViewModel.swift */,
 				9B4C8CF72C440624003AFD26 /* ScreenViewModel.swift */,
 				9B4C8CF92C440850003AFD26 /* AlertItem.swift */,
-				9B4C8CFB2C440C8B003AFD26 /* BaseViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
