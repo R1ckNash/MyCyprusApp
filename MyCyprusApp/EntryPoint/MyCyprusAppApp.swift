@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MyCyprusAppApp: App {
+    
+    @StateObject var model: RestaurantsViewModel = RestaurantsViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RestaurantsView(model: model)
         }
     }
 }

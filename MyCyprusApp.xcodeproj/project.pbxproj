@@ -8,17 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		9B4C8CC42C43DAD3003AFD26 /* MyCyprusAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CC32C43DAD3003AFD26 /* MyCyprusAppApp.swift */; };
-		9B4C8CC62C43DAD3003AFD26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CC52C43DAD3003AFD26 /* ContentView.swift */; };
+		9B4C8CC62C43DAD3003AFD26 /* RestaurantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CC52C43DAD3003AFD26 /* RestaurantsView.swift */; };
 		9B4C8CC82C43DAD5003AFD26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C8CC72C43DAD5003AFD26 /* Assets.xcassets */; };
 		9B4C8CCB2C43DAD5003AFD26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C8CCA2C43DAD5003AFD26 /* Preview Assets.xcassets */; };
+		9B4C8CD82C43DF30003AFD26 /* RestaurantsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CD72C43DF30003AFD26 /* RestaurantsViewModel.swift */; };
+		9B4C8CDC2C43E08A003AFD26 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CDB2C43E08A003AFD26 /* Restaurant.swift */; };
+		9B4C8CDE2C43E34A003AFD26 /* RestaurantDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CDD2C43E34A003AFD26 /* RestaurantDetailInfo.swift */; };
+		9B4C8CE02C43E625003AFD26 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CDF2C43E625003AFD26 /* Api.swift */; };
+		9B4C8CE32C43E6A2003AFD26 /* RestaurantApiPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CE22C43E6A2003AFD26 /* RestaurantApiPath.swift */; };
+		9B4C8CE72C43EBD1003AFD26 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CE62C43EBD1003AFD26 /* BaseResponse.swift */; };
+		9B4C8CEA2C43EF00003AFD26 /* RestaurantRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CE92C43EF00003AFD26 /* RestaurantRequests.swift */; };
+		9B4C8CED2C43EFC1003AFD26 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9B4C8CEC2C43EFC1003AFD26 /* Alamofire */; };
+		9B4C8CF12C43F494003AFD26 /* ApiRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CF02C43F494003AFD26 /* ApiRequests.swift */; };
+		9B4C8CF42C440559003AFD26 /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CF32C440559003AFD26 /* ScreenView.swift */; };
+		9B4C8CF82C440624003AFD26 /* ScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CF72C440624003AFD26 /* ScreenViewModel.swift */; };
+		9B4C8CFA2C440850003AFD26 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CF92C440850003AFD26 /* AlertItem.swift */; };
+		9B4C8CFC2C440C8B003AFD26 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CFB2C440C8B003AFD26 /* BaseViewModel.swift */; };
+		9B4C8CFF2C441196003AFD26 /* RestaurantItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CFE2C441196003AFD26 /* RestaurantItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9B4C8CC02C43DAD3003AFD26 /* MyCyprusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCyprusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4C8CC32C43DAD3003AFD26 /* MyCyprusAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCyprusAppApp.swift; sourceTree = "<group>"; };
-		9B4C8CC52C43DAD3003AFD26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9B4C8CC52C43DAD3003AFD26 /* RestaurantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsView.swift; sourceTree = "<group>"; };
 		9B4C8CC72C43DAD5003AFD26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B4C8CCA2C43DAD5003AFD26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9B4C8CD72C43DF30003AFD26 /* RestaurantsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsViewModel.swift; sourceTree = "<group>"; };
+		9B4C8CDB2C43E08A003AFD26 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		9B4C8CDD2C43E34A003AFD26 /* RestaurantDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailInfo.swift; sourceTree = "<group>"; };
+		9B4C8CDF2C43E625003AFD26 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		9B4C8CE22C43E6A2003AFD26 /* RestaurantApiPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantApiPath.swift; sourceTree = "<group>"; };
+		9B4C8CE62C43EBD1003AFD26 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		9B4C8CE92C43EF00003AFD26 /* RestaurantRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRequests.swift; sourceTree = "<group>"; };
+		9B4C8CF02C43F494003AFD26 /* ApiRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequests.swift; sourceTree = "<group>"; };
+		9B4C8CF32C440559003AFD26 /* ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
+		9B4C8CF72C440624003AFD26 /* ScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewModel.swift; sourceTree = "<group>"; };
+		9B4C8CF92C440850003AFD26 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		9B4C8CFB2C440C8B003AFD26 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		9B4C8CFE2C441196003AFD26 /* RestaurantItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4C8CED2C43EFC1003AFD26 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +79,8 @@
 		9B4C8CC22C43DAD3003AFD26 /* MyCyprusApp */ = {
 			isa = PBXGroup;
 			children = (
-				9B4C8CC32C43DAD3003AFD26 /* MyCyprusAppApp.swift */,
-				9B4C8CC52C43DAD3003AFD26 /* ContentView.swift */,
+				9B4C8CD12C43DB74003AFD26 /* EntryPoint */,
+				9B4C8CD22C43DB84003AFD26 /* Source */,
 				9B4C8CC72C43DAD5003AFD26 /* Assets.xcassets */,
 				9B4C8CC92C43DAD5003AFD26 /* Preview Content */,
 			);
@@ -65,6 +93,147 @@
 				9B4C8CCA2C43DAD5003AFD26 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9B4C8CD12C43DB74003AFD26 /* EntryPoint */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CC32C43DAD3003AFD26 /* MyCyprusAppApp.swift */,
+			);
+			path = EntryPoint;
+			sourceTree = "<group>";
+		};
+		9B4C8CD22C43DB84003AFD26 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CD42C43DD63003AFD26 /* Network */,
+				9B4C8CD32C43DB9C003AFD26 /* Models */,
+				9B4C8CD52C43DD84003AFD26 /* Modules */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		9B4C8CD32C43DB9C003AFD26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CE52C43EBA7003AFD26 /* Network */,
+				9B4C8CDB2C43E08A003AFD26 /* Restaurant.swift */,
+				9B4C8CDD2C43E34A003AFD26 /* RestaurantDetailInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B4C8CD42C43DD63003AFD26 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CE12C43E696003AFD26 /* Data */,
+				9B4C8CDF2C43E625003AFD26 /* Api.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9B4C8CD52C43DD84003AFD26 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CF22C44053F003AFD26 /* Shared */,
+				9B4C8CD62C43DDB2003AFD26 /* Content */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9B4C8CD62C43DDB2003AFD26 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CD92C43DF49003AFD26 /* Restaurants */,
+				9B4C8CDA2C43DF56003AFD26 /* Details */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		9B4C8CD92C43DF49003AFD26 /* Restaurants */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CFD2C441188003AFD26 /* Views */,
+				9B4C8CC52C43DAD3003AFD26 /* RestaurantsView.swift */,
+				9B4C8CD72C43DF30003AFD26 /* RestaurantsViewModel.swift */,
+			);
+			path = Restaurants;
+			sourceTree = "<group>";
+		};
+		9B4C8CDA2C43DF56003AFD26 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		9B4C8CE12C43E696003AFD26 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CE82C43EEE1003AFD26 /* Requests */,
+				9B4C8CE42C43E6AA003AFD26 /* Path */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		9B4C8CE42C43E6AA003AFD26 /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CE22C43E6A2003AFD26 /* RestaurantApiPath.swift */,
+			);
+			path = Path;
+			sourceTree = "<group>";
+		};
+		9B4C8CE52C43EBA7003AFD26 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CE62C43EBD1003AFD26 /* BaseResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9B4C8CE82C43EEE1003AFD26 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CE92C43EF00003AFD26 /* RestaurantRequests.swift */,
+				9B4C8CF02C43F494003AFD26 /* ApiRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		9B4C8CF22C44053F003AFD26 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CF62C4405A0003AFD26 /* Models */,
+				9B4C8CF52C44059A003AFD26 /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		9B4C8CF52C44059A003AFD26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CF32C440559003AFD26 /* ScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B4C8CF62C4405A0003AFD26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CF72C440624003AFD26 /* ScreenViewModel.swift */,
+				9B4C8CF92C440850003AFD26 /* AlertItem.swift */,
+				9B4C8CFB2C440C8B003AFD26 /* BaseViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9B4C8CFD2C441188003AFD26 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CFE2C441196003AFD26 /* RestaurantItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +252,9 @@
 			dependencies = (
 			);
 			name = MyCyprusApp;
+			packageProductDependencies = (
+				9B4C8CEC2C43EFC1003AFD26 /* Alamofire */,
+			);
 			productName = MyCyprusApp;
 			productReference = 9B4C8CC02C43DAD3003AFD26 /* MyCyprusApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 9B4C8CB72C43DAD3003AFD26;
+			packageReferences = (
+				9B4C8CEB2C43EFC1003AFD26 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9B4C8CC12C43DAD3003AFD26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +312,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B4C8CC62C43DAD3003AFD26 /* ContentView.swift in Sources */,
+				9B4C8CE02C43E625003AFD26 /* Api.swift in Sources */,
+				9B4C8CFF2C441196003AFD26 /* RestaurantItemView.swift in Sources */,
+				9B4C8CE32C43E6A2003AFD26 /* RestaurantApiPath.swift in Sources */,
+				9B4C8CF12C43F494003AFD26 /* ApiRequests.swift in Sources */,
+				9B4C8CFC2C440C8B003AFD26 /* BaseViewModel.swift in Sources */,
+				9B4C8CDE2C43E34A003AFD26 /* RestaurantDetailInfo.swift in Sources */,
+				9B4C8CF82C440624003AFD26 /* ScreenViewModel.swift in Sources */,
+				9B4C8CDC2C43E08A003AFD26 /* Restaurant.swift in Sources */,
+				9B4C8CC62C43DAD3003AFD26 /* RestaurantsView.swift in Sources */,
+				9B4C8CD82C43DF30003AFD26 /* RestaurantsViewModel.swift in Sources */,
 				9B4C8CC42C43DAD3003AFD26 /* MyCyprusAppApp.swift in Sources */,
+				9B4C8CE72C43EBD1003AFD26 /* BaseResponse.swift in Sources */,
+				9B4C8CEA2C43EF00003AFD26 /* RestaurantRequests.swift in Sources */,
+				9B4C8CFA2C440850003AFD26 /* AlertItem.swift in Sources */,
+				9B4C8CF42C440559003AFD26 /* ScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +475,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.illi.MyCyprusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -316,6 +508,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.illi.MyCyprusApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,6 +540,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B4C8CEB2C43EFC1003AFD26 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B4C8CEC2C43EFC1003AFD26 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B4C8CEB2C43EFC1003AFD26 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9B4C8CB82C43DAD3003AFD26 /* Project object */;
 }
