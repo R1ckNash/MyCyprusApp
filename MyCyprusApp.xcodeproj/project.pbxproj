@@ -25,6 +25,10 @@
 		9B4C8CFA2C440850003AFD26 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CF92C440850003AFD26 /* AlertItem.swift */; };
 		9B4C8CFC2C440C8B003AFD26 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CFB2C440C8B003AFD26 /* BaseViewModel.swift */; };
 		9B4C8CFF2C441196003AFD26 /* RestaurantItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CFE2C441196003AFD26 /* RestaurantItemView.swift */; };
+		9BB76DE12C4577110088A106 /* RestaurantDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB76DE02C4577110088A106 /* RestaurantDetailsView.swift */; };
+		9BB76DE32C4577270088A106 /* RestaurantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB76DE22C4577270088A106 /* RestaurantDetailViewModel.swift */; };
+		9BC3E23A2C45C63200BD8A23 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC3E2392C45C63200BD8A23 /* RatingView.swift */; };
+		9BC3E23D2C45CB2700BD8A23 /* NameAndRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC3E23C2C45CB2700BD8A23 /* NameAndRateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		9B4C8CF92C440850003AFD26 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		9B4C8CFB2C440C8B003AFD26 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		9B4C8CFE2C441196003AFD26 /* RestaurantItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItemView.swift; sourceTree = "<group>"; };
+		9BB76DE02C4577110088A106 /* RestaurantDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsView.swift; sourceTree = "<group>"; };
+		9BB76DE22C4577270088A106 /* RestaurantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewModel.swift; sourceTree = "<group>"; };
+		9BC3E2392C45C63200BD8A23 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		9BC3E23C2C45CB2700BD8A23 /* NameAndRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAndRateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				9B4C8CD92C43DF49003AFD26 /* Restaurants */,
-				9B4C8CDA2C43DF56003AFD26 /* Details */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -153,9 +160,8 @@
 		9B4C8CD92C43DF49003AFD26 /* Restaurants */ = {
 			isa = PBXGroup;
 			children = (
-				9B4C8CFD2C441188003AFD26 /* Views */,
-				9B4C8CC52C43DAD3003AFD26 /* RestaurantsView.swift */,
-				9B4C8CD72C43DF30003AFD26 /* RestaurantsViewModel.swift */,
+				9BB76DE42C4577A50088A106 /* Main */,
+				9B4C8CDA2C43DF56003AFD26 /* Details */,
 			);
 			path = Restaurants;
 			sourceTree = "<group>";
@@ -163,6 +169,9 @@
 		9B4C8CDA2C43DF56003AFD26 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				9BC3E23B2C45C63700BD8A23 /* Views */,
+				9BB76DE02C4577110088A106 /* RestaurantDetailsView.swift */,
+				9BB76DE22C4577270088A106 /* RestaurantDetailViewModel.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -232,6 +241,25 @@
 			isa = PBXGroup;
 			children = (
 				9B4C8CFE2C441196003AFD26 /* RestaurantItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9BB76DE42C4577A50088A106 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9B4C8CFD2C441188003AFD26 /* Views */,
+				9B4C8CC52C43DAD3003AFD26 /* RestaurantsView.swift */,
+				9B4C8CD72C43DF30003AFD26 /* RestaurantsViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9BC3E23B2C45C63700BD8A23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BC3E2392C45C63200BD8A23 /* RatingView.swift */,
+				9BC3E23C2C45CB2700BD8A23 /* NameAndRateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,15 +343,19 @@
 				9B4C8CE02C43E625003AFD26 /* Api.swift in Sources */,
 				9B4C8CFF2C441196003AFD26 /* RestaurantItemView.swift in Sources */,
 				9B4C8CE32C43E6A2003AFD26 /* RestaurantApiPath.swift in Sources */,
+				9BC3E23A2C45C63200BD8A23 /* RatingView.swift in Sources */,
 				9B4C8CF12C43F494003AFD26 /* ApiRequests.swift in Sources */,
 				9B4C8CFC2C440C8B003AFD26 /* BaseViewModel.swift in Sources */,
+				9BC3E23D2C45CB2700BD8A23 /* NameAndRateView.swift in Sources */,
 				9B4C8CDE2C43E34A003AFD26 /* RestaurantDetailInfo.swift in Sources */,
 				9B4C8CF82C440624003AFD26 /* ScreenViewModel.swift in Sources */,
 				9B4C8CDC2C43E08A003AFD26 /* Restaurant.swift in Sources */,
 				9B4C8CC62C43DAD3003AFD26 /* RestaurantsView.swift in Sources */,
+				9BB76DE32C4577270088A106 /* RestaurantDetailViewModel.swift in Sources */,
 				9B4C8CD82C43DF30003AFD26 /* RestaurantsViewModel.swift in Sources */,
 				9B4C8CC42C43DAD3003AFD26 /* MyCyprusAppApp.swift in Sources */,
 				9B4C8CE72C43EBD1003AFD26 /* BaseResponse.swift in Sources */,
+				9BB76DE12C4577110088A106 /* RestaurantDetailsView.swift in Sources */,
 				9B4C8CEA2C43EF00003AFD26 /* RestaurantRequests.swift in Sources */,
 				9B4C8CFA2C440850003AFD26 /* AlertItem.swift in Sources */,
 				9B4C8CF42C440559003AFD26 /* ScreenView.swift in Sources */,

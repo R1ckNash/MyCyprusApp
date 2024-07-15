@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Restaurant: Decodable {
+struct Restaurant: Decodable, Hashable {
     
     let id: Int
     let name: String
@@ -37,7 +37,7 @@ struct Restaurant: Decodable {
         case name = "name"
         
         case photoUrl = "photo"
-        case rate = "middleName"
+        case rate = "rate"
         case averageCheck = "averageCheck"
         
         case cuisines = "cuisines"

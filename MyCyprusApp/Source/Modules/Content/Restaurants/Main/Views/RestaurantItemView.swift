@@ -10,6 +10,7 @@ import SwiftUI
 struct RestaurantItemView: View {
     
     let item: Restaurant
+   // @State var isFavoriteTapped: Bool = false
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -17,7 +18,7 @@ struct RestaurantItemView: View {
             Image(systemName: "person")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .background(.red)
+                .background(.blue)
                 .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 160)
                 .clipped()
             
@@ -35,11 +36,12 @@ struct RestaurantItemView: View {
             HStack {
                 Text("\(item.name)")
                     .font(.title3)
+                    .foregroundStyle(.black)
                 Spacer()
                 Button {
-                    
+                    //isFavoriteTapped.toggle()
                 } label: {
-                    Image(systemName: "heart.fill")
+                    Image(systemName: item.isFavorite ? "heart.fill" : "heart")
                         .foregroundStyle(.blue)
                         .font(.title2)
                 }
@@ -66,7 +68,6 @@ struct RestaurantItemView: View {
             .ignoresSafeArea()
         VStack {
             RestaurantItemView(item: .preview)
-            //RestaurantItemView(item: .preview)
         }
     }
 }

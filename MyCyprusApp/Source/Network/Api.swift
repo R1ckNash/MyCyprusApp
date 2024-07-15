@@ -41,6 +41,13 @@ final class Api {
     // MARK: - Restaurants
     func fetchRestaurants() async throws -> BaseResponse<Restaurant> {
         let request = try self.requests.restaurants.fetch()
+
+        return try await self.send(request: request)
+    }
+    
+    func fetchRestaurantDetails(for id: Int) async throws -> RestaurantDetailInfo {
+        let request = try self.requests.restaurants.fetchDetails(for: id)
+
         return try await self.send(request: request)
     }
        

@@ -11,4 +11,7 @@ enum RestaurantApiPath: String {
     
     /// GET: /Restaurants
     case restaurants = "internship/organizations/category/1/organizations/"
+    
+    /// GET: /Restaurant details
+    case restaurantDetails = "internship/organization/"
 }
