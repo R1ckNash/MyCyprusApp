@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Restaurant: Decodable, Hashable {
+struct Restaurant: Identifiable, Codable, Hashable {
     
     let id: Int
     let name: String
@@ -17,7 +17,7 @@ struct Restaurant: Decodable, Hashable {
     let averageCheck: [Int]
     let cuisines: [String]
     
-    let isFavorite: Bool
+    var isFavorite: Bool
     let distance: String?
     
     var formattedRate: String {

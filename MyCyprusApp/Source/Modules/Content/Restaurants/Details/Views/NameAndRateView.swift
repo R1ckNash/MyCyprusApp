@@ -16,7 +16,7 @@ struct NameAndRateView: View {
         HStack {
             VStack(alignment: .leading, spacing: 8) {
                 Text(item.name)
-                    .font(.title2.bold())
+                    .font(.title3.bold())
                 HStack {
                     RatingView(rating: item.rate ?? 0.0)
                     Text(item.formattedRate)

@@ -15,7 +15,7 @@ struct RatingView: View {
     var offImage: Image?
     var onImage: Image = Image(systemName: "star.fill")
     
-    let offColor: Color = .gray
+    let offColor: Color = Color(.systemGray4)
     let onColor: Color = .blue
     
     var body: some View {

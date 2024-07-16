@@ -11,8 +11,6 @@ struct RestaurantsView: View {
     
     @ObservedObject var model: RestaurantsViewModel
     
-    @State var isFavoriteModeOn: Bool = false
-    
     var body: some View {
         NavigationStack {
             ScreenView(model: model.screenModel) {
@@ -27,10 +25,11 @@ struct RestaurantsView: View {
                         }
                     } else {
                         LazyVStack {
-                            ForEach(model.restaurants, id: \.id) { item in
+                            ForEach(model.filteredRestraunts) { item in
                                 NavigationLink(value: item) {
                                     RestaurantItemView(item: item)
                                         .padding(.horizontal)
+                                        .environmentObject(model)
                                 }
                             }
                         }
@@ -46,10 +45,10 @@ struct RestaurantsView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        isFavoriteModeOn.toggle()
+                        model.showFavorite()
                     } label: {
-                        Image(systemName: isFavoriteModeOn ? "heart.fill" : "heart")
-                            .foregroundStyle(.blue)
+                        FavoriteView(ids: $model.favoriteRestaurantIds,
+                                     isFavoriteModeOn: $model.isFavoriteModeOn)
                     }
                 }
             }
@@ -82,7 +81,6 @@ struct RestaurantsView_PreviewView: View {
                     }
                 }
         }
-        
     }
 }
 

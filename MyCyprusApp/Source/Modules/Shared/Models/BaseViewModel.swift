@@ -30,7 +30,7 @@ class BaseViewModel {
         subscriptions = []
         
         #if DEBUG
-        print("DEBUG: ", String(describing: self.self), " - Init")
+        print("DEBUG: ", String(describing: self.self), " - Init Base Model")
         #endif
     }
     
@@ -38,7 +38,7 @@ class BaseViewModel {
         subscriptions.removeAll()
         
         #if DEBUG
-        print("DEBUG: ", String(describing: self.self), " - Deinit")
+        print("DEBUG: ", String(describing: self.self), " - Deinit Base Model")
         #endif
     }
     

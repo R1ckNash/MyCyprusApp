@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct RestaurantDetailsView: View {
     
@@ -28,11 +29,16 @@ struct RestaurantDetailsView: View {
                             ScrollView(.horizontal, showsIndicators: false) {
                                 LazyHStack {
                                     ForEach(restaurant.photoUrls, id: \.self) { photo  in
-                                        Image(systemName: photo)
+                                        KFImage(URL(string: photo))
+                                            .placeholder {
+                                                Rectangle()
+                                                    .fill(Color.gray)
+                                                    .frame(width: UIScreen.main.bounds.width - 32, height: 200)
+                                                    .cornerRadius(16)
+                                            }
                                             .resizable()
-                                            .scaledToFit()
+                                            .aspectRatio(contentMode: .fill)
                                             .frame(width: UIScreen.main.bounds.width - 32, height: 200)
-                                            .background(.blue)
                                             .clipped()
                                             .cornerRadius(16)
                                     }

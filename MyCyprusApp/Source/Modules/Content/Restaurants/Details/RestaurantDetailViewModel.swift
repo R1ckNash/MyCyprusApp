@@ -15,7 +15,6 @@ final class RestaurantDetailsViewModel: BaseViewModel, ObservableObject {
     
     private(set) var restaurant: RestaurantDetailInfo? = nil
     
-    
     //MARK: - Public
     func set(id: Int) {
         self.id = id

@@ -54,6 +54,12 @@ struct RestaurantDetailInfo: Decodable {
 
 #if DEBUG
 extension RestaurantDetailInfo {
-    static let preview: RestaurantDetailInfo = .init(id: 1, name: "Ledrahan", photoUrls: ["person", "heart", "bookmark", "globe"], detailedInfo: "Aster Bakery — это кафе-пекарня с открытой кухней, где посетители могут наблюдать за процессом приготовления хлеба и выпечки. Меню включает в себя разнообразные завтраки, такие как скрэмбл, вареные яйца и авокадо-тосты, а также основное меню с блюдами, такими как ризотто и капкейки.", rate: 4.5, averageCheck: [], isFavorite: false, distance: nil)
+    static let preview: RestaurantDetailInfo = .init(id: 1, name: "Ledrahan", photoUrls: [
+        "https://api.mycyprus.app/media/organizations/1.JPG",
+        "https://api.mycyprus.app/media/organizations/2.JPG",
+        "https://api.mycyprus.app/media/organizations/3.JPG",
+        "https://api.mycyprus.app/media/organizations/Ekran_Al%C4%B1nt%C4%B1s%C4%B1.JPG",
+        "https://api.mycyprus.app/media/organizations/Ekran_Al%C4%B1nt%C4%B1s%C4%B11.JPG"
+    ], detailedInfo: "Aster Bakery — это кафе-пекарня с открытой кухней, где посетители могут наблюдать за процессом приготовления хлеба и выпечки. Меню включает в себя разнообразные завтраки, такие как скрэмбл, вареные яйца и авокадо-тосты, а также основное меню с блюдами, такими как ризотто и капкейки.", rate: 4.5, averageCheck: [], isFavorite: false, distance: nil)
 }
 #endif

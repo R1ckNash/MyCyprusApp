@@ -15,6 +15,7 @@ struct MyCyprusAppApp: App {
     var body: some Scene {
         WindowGroup {
             RestaurantsView(model: model)
+                .preferredColorScheme(.light)
         }
     }
 }
