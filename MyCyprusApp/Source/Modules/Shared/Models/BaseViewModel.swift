@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 @MainActor
 class BaseViewModel {
@@ -22,7 +21,7 @@ class BaseViewModel {
         Api.shared
     }
 
-    //MARK: - Life cycle
+    //MARK: - Life Cycle
     init() {
         screenModel = .init()
         
@@ -50,7 +49,7 @@ class BaseViewModel {
         return true
     }
     
-    func startLoading() {
+    private func startLoading() {
         activity = true
         
         #if DEBUG
@@ -62,7 +61,7 @@ class BaseViewModel {
         startLoading()
     }
     
-    func stopLoading() {
+    private func stopLoading() {
         activity = false
         
         #if DEBUG

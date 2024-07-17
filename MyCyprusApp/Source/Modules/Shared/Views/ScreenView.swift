@@ -29,8 +29,8 @@ struct ScreenView<Content>: View where Content: View {
             .simpleToast(isPresented: $model.isActiveToast, options: .init(alignment: .top, hideAfter: 1, modifierType: .slide)) {
                 Label(model.toastItem?.message ?? "", systemImage: "x.circle")
                     .padding()
-                    .background(Color.red)
-                    .foregroundColor(Color.white)
+                    .background(.red)
+                    .foregroundColor(.white)
                     .cornerRadius(10)
                     .padding(.top)
             }

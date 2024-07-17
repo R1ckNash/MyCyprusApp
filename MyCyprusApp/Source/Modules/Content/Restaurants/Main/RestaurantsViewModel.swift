@@ -22,6 +22,7 @@ final class RestaurantsViewModel: BaseViewModel, ObservableObject {
     //MARK: - Properties
     private(set) lazy var details: RestaurantDetailsViewModel = .init()
     
+    //MARK: - Calculated Properties
     var filteredRestraunts: [Restaurant] {
         isFavoriteModeOn 
         ? restaurants.filter { favoriteRestaurantIds.contains($0.id) }
@@ -92,7 +93,7 @@ final class RestaurantsViewModel: BaseViewModel, ObservableObject {
     
     deinit {
         #if DEBUG
-        print("DEBUG: ", String(describing: self.self), " - Init")
+        print("DEBUG: ", String(describing: self.self), " - Deinit")
         #endif
     }
     

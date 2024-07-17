@@ -10,8 +10,8 @@ import Kingfisher
 
 struct RestaurantItemView: View {
     
-     var item: Restaurant
     @EnvironmentObject var model: RestaurantsViewModel
+    var item: Restaurant
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {

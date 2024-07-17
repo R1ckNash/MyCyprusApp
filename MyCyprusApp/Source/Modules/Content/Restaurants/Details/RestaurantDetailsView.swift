@@ -104,4 +104,5 @@ struct RestaurantDetailsView: View {
     let model = RestaurantDetailsViewModel()
     model.set(restaurant: .preview)
     return RestaurantDetailsView(model: model)
+        .environmentObject(RestaurantsViewModel())
 }

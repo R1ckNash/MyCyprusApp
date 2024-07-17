@@ -43,4 +43,5 @@ struct NameAndRateView: View {
 
 #Preview {
     NameAndRateView(item: .preview)
+        .environmentObject(RestaurantsViewModel())
 }

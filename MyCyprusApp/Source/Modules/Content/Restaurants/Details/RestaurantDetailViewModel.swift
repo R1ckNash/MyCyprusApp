@@ -47,7 +47,6 @@ final class RestaurantDetailsViewModel: BaseViewModel, ObservableObject {
         print("DEBUG: ", String(describing: self.self), " - Init")
         #endif
     }
-    
 }
 
 // MARK: - Requests

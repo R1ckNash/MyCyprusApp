@@ -35,7 +35,7 @@ struct RestaurantsView: View {
                         }
                     }
                 }
-                .navigationTitle("Restaurants")
+                .navigationTitle(model.isFavoriteModeOn ? "Favorites" : "Restaurants")
                 .navigationBarTitleDisplayMode(.inline)
                 .background {
                     Color(uiColor: .systemGroupedBackground)
