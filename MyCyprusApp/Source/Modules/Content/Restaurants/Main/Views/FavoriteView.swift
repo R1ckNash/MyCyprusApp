@@ -18,9 +18,9 @@ struct FavoriteView: View {
                 .font(.title2)
             Text(String(ids.count))
                 .font(.caption2)
-                .foregroundStyle(isFavoriteModeOn ? .white : .blue)
+                .foregroundStyle(isFavoriteModeOn ? .white : .cyan)
         }
-        .foregroundStyle(.blue)
+        .foregroundStyle(.cyan)
     }
 }
 

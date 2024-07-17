@@ -21,7 +21,7 @@ struct NameAndRateView: View {
                     RatingView(rating: item.rate ?? 0.0)
                     Text(item.formattedRate)
                         .font(.title3.bold())
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(.cyan)
                 }
             }
             
@@ -33,6 +33,7 @@ struct NameAndRateView: View {
                 } label: {
                     Image(systemName: restaurantsModel.contains(item.id) ? "heart.fill" : "heart")
                         .font(.title2.bold())
+                        .foregroundStyle(.cyan)
                 }
                 Text(item.formattedDistance)
                     .foregroundStyle(.gray)

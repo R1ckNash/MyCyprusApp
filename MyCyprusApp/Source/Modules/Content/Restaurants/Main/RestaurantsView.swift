@@ -28,7 +28,6 @@ struct RestaurantsView: View {
                             ForEach(model.filteredRestraunts) { item in
                                 NavigationLink(value: item) {
                                     RestaurantItemView(item: item)
-                                        .padding(.horizontal)
                                         .environmentObject(model)
                                 }
                             }

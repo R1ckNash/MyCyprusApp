@@ -39,33 +39,36 @@ struct RestaurantItemView: View {
     }
     
     var footer: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading) {
             HStack {
                 Text("\(item.name)")
                     .foregroundStyle(.black)
-                    .font(.title3)
                 Spacer()
                 Button {
                     model.toggleFavorite(for: item.id)
                 } label: {
                     Image(systemName: item.isFavorite ? "heart.fill" : "heart")
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(.cyan)
                         .font(.title2)
                 }
             }
             
             HStack {
                 Image(systemName: "star.fill")
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(.cyan)
+                
                 Text(item.formattedRate)
                     .foregroundStyle(.black)
+                
                 Text(item.formattedAverageCheck)
                     .foregroundStyle(.gray)
+                
                 Text(item.formattedCuisines)
                     .foregroundStyle(.gray)
                     .lineLimit(1)
                     .truncationMode(.tail)
             }
+            .font(.subheadline)
         }
     }
 }
