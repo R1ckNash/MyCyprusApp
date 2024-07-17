@@ -17,8 +17,6 @@ class BaseViewModel {
     //MARK: - Properties
     private(set) var screenModel: ScreenViewModel
     
-    var subscriptions: Set<AnyCancellable>
-    
     // MARK: Calculated Properties
     var api: Api {
         Api.shared
@@ -27,7 +25,6 @@ class BaseViewModel {
     //MARK: - Life cycle
     init() {
         screenModel = .init()
-        subscriptions = []
         
         #if DEBUG
         print("DEBUG: ", String(describing: self.self), " - Init Base Model")
@@ -35,8 +32,6 @@ class BaseViewModel {
     }
     
     deinit {
-        subscriptions.removeAll()
-        
         #if DEBUG
         print("DEBUG: ", String(describing: self.self), " - Deinit Base Model")
         #endif
@@ -79,11 +74,13 @@ class BaseViewModel {
         stopLoading()
     }
     
-    
     // MARK: Error handle's
-    func handle(error message: String, title: String, action: (() -> Void)? = nil) {
-        self.screenModel.set(alert: .init(title: message, message: title))
-        
-        //self.screenModel.set(alert: .init(message.localized(), title: title.localized()) localization
+    func handle(error message: String, title: String) {
+        self.screenModel.setAlert(alert: .init(title: message, message: title))
     }
+    
+    func handle(error message: String) {
+        self.screenModel.setToast(toast: .init(message: message))
+    }
+
 }

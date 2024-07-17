@@ -54,6 +54,7 @@ struct RestaurantsView: View {
             }
             .navigationDestination(for: Restaurant.self) { (value) in
                 RestaurantDetailsView(model: self.model.detailModel(for: value.id))
+                    .environmentObject(model)
             }
             .onAppear {
                 Task {

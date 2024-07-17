@@ -1,5 +1,5 @@
 {
-  "originHash" : "a3be624f4426ab85fc31eb4af4c86c70ad0bea74fabbf337db2e9e44f6700f8b",
+  "originHash" : "6359405af232702681c1755906c4dfbc35084ba6cc0be34e180d56e3059b92cd",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "2ef543ee21d63734e1c004ad6c870255e8716c50",
         "version" : "7.12.0"
+      }
+    },
+    {
+      "identity" : "simpletoast",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sanzaru/SimpleToast",
+      "state" : {
+        "revision" : "8dbc2e7c33cda25c0b2efafd59716cb9820c83eb",
+        "version" : "0.8.1"
       }
     }
   ],

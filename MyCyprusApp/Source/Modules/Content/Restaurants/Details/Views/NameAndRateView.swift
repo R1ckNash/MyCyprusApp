@@ -10,7 +10,7 @@ import SwiftUI
 struct NameAndRateView: View {
     
     let item: RestaurantDetailInfo
-    @State var isFavorite: Bool = false
+    @EnvironmentObject var restaurantsModel: RestaurantsViewModel
     
     var body: some View {
         HStack {
@@ -29,9 +29,9 @@ struct NameAndRateView: View {
             
             VStack(alignment: .trailing, spacing: 8) {
                 Button {
-                    isFavorite.toggle()
+                    restaurantsModel.toggleFavorite(for: item.id)
                 } label: {
-                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                    Image(systemName: restaurantsModel.contains(item.id) ? "heart.fill" : "heart")
                         .font(.title2.bold())
                 }
                 Text(item.formattedDistance)

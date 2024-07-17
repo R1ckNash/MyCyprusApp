@@ -10,11 +10,12 @@ import Kingfisher
 
 struct RestaurantDetailsView: View {
     
+    @EnvironmentObject var restaurantsModel: RestaurantsViewModel
     @ObservedObject var model: RestaurantDetailsViewModel
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        ScreenView(model: model.screenModel) {
+        ScreenView(model: restaurantsModel.screenModel) {
             ScrollView {
                 if model.activity {
                     HStack {

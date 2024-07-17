@@ -33,6 +33,21 @@ final class RestaurantDetailsViewModel: BaseViewModel, ObservableObject {
         return result && success
     }
     
+    //MARK: - Life Cycle
+    override init() {
+        super.init()
+        
+        #if DEBUG
+        print("DEBUG: ", String(describing: self.self), " - Init")
+        #endif
+    }
+    
+    deinit {
+        #if DEBUG
+        print("DEBUG: ", String(describing: self.self), " - Init")
+        #endif
+    }
+    
 }
 
 // MARK: - Requests

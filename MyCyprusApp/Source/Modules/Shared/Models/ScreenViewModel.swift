@@ -13,10 +13,11 @@ final class ScreenViewModel: ObservableObject {
     
     //MARK: - Publishers
     @Published var isActiveAlert: Bool = false
+    @Published var isActiveToast: Bool = false
     
     //MARK: - Properties
-    private var subscriptions: [AnyCancellable] = []
     var alertItem: AlertItem? = nil
+    var toastItem: ToastItem? = nil
     
     init() {
         #if DEBUG
@@ -25,8 +26,6 @@ final class ScreenViewModel: ObservableObject {
     }
     
     deinit {
-        subscriptions.removeAll()
-        
         #if DEBUG
         print("DEBUG: ", String(describing: self.self), " - Deinit")
         #endif
@@ -34,8 +33,14 @@ final class ScreenViewModel: ObservableObject {
     
     // MARK: Actions
     @MainActor
-    public func set(alert: AlertItem) {
+    public func setAlert(alert: AlertItem) {
         self.alertItem = alert
         self.isActiveAlert = true
+    }
+    
+    @MainActor
+    public func setToast(toast: ToastItem) {
+        self.toastItem = toast
+        self.isActiveToast = true
     }
 }

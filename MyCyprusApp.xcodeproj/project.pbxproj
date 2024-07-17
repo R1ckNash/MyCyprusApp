@@ -27,6 +27,9 @@
 		9B4C8CFF2C441196003AFD26 /* RestaurantItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C8CFE2C441196003AFD26 /* RestaurantItemView.swift */; };
 		9B70D9382C46B46600877696 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9B70D9372C46B46600877696 /* Kingfisher */; };
 		9B70D93A2C46CD9C00877696 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70D9392C46CD9C00877696 /* FavoriteView.swift */; };
+		9B8393902C473CE20025A5C2 /* AddFavoriteResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B83938F2C473CE20025A5C2 /* AddFavoriteResponse.swift */; };
+		9B8393932C4749A30025A5C2 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 9B8393922C4749A30025A5C2 /* SimpleToast */; };
+		9B8393952C474AF50025A5C2 /* ToastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8393942C474AF50025A5C2 /* ToastItem.swift */; };
 		9BB76DE12C4577110088A106 /* RestaurantDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB76DE02C4577110088A106 /* RestaurantDetailsView.swift */; };
 		9BB76DE32C4577270088A106 /* RestaurantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB76DE22C4577270088A106 /* RestaurantDetailViewModel.swift */; };
 		9BC3E23A2C45C63200BD8A23 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC3E2392C45C63200BD8A23 /* RatingView.swift */; };
@@ -53,6 +56,8 @@
 		9B4C8CFB2C440C8B003AFD26 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		9B4C8CFE2C441196003AFD26 /* RestaurantItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantItemView.swift; sourceTree = "<group>"; };
 		9B70D9392C46CD9C00877696 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
+		9B83938F2C473CE20025A5C2 /* AddFavoriteResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteResponse.swift; sourceTree = "<group>"; };
+		9B8393942C474AF50025A5C2 /* ToastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastItem.swift; sourceTree = "<group>"; };
 		9BB76DE02C4577110088A106 /* RestaurantDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsView.swift; sourceTree = "<group>"; };
 		9BB76DE22C4577270088A106 /* RestaurantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewModel.swift; sourceTree = "<group>"; };
 		9BC3E2392C45C63200BD8A23 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
@@ -65,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B70D9382C46B46600877696 /* Kingfisher in Frameworks */,
+				9B8393932C4749A30025A5C2 /* SimpleToast in Frameworks */,
 				9B4C8CED2C43EFC1003AFD26 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +137,7 @@
 				9B4C8CE52C43EBA7003AFD26 /* Network */,
 				9B4C8CDB2C43E08A003AFD26 /* Restaurant.swift */,
 				9B4C8CDD2C43E34A003AFD26 /* RestaurantDetailInfo.swift */,
+				9B83938F2C473CE20025A5C2 /* AddFavoriteResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -237,6 +244,7 @@
 				9B4C8CFB2C440C8B003AFD26 /* BaseViewModel.swift */,
 				9B4C8CF72C440624003AFD26 /* ScreenViewModel.swift */,
 				9B4C8CF92C440850003AFD26 /* AlertItem.swift */,
+				9B8393942C474AF50025A5C2 /* ToastItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 			packageProductDependencies = (
 				9B4C8CEC2C43EFC1003AFD26 /* Alamofire */,
 				9B70D9372C46B46600877696 /* Kingfisher */,
+				9B8393922C4749A30025A5C2 /* SimpleToast */,
 			);
 			productName = MyCyprusApp;
 			productReference = 9B4C8CC02C43DAD3003AFD26 /* MyCyprusApp.app */;
@@ -320,6 +329,7 @@
 			packageReferences = (
 				9B4C8CEB2C43EFC1003AFD26 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9B70D9362C46B46600877696 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				9B8393912C4749A30025A5C2 /* XCRemoteSwiftPackageReference "SimpleToast" */,
 			);
 			productRefGroup = 9B4C8CC12C43DAD3003AFD26 /* Products */;
 			projectDirPath = "";
@@ -360,6 +370,8 @@
 				9B4C8CDC2C43E08A003AFD26 /* Restaurant.swift in Sources */,
 				9B4C8CC62C43DAD3003AFD26 /* RestaurantsView.swift in Sources */,
 				9BB76DE32C4577270088A106 /* RestaurantDetailViewModel.swift in Sources */,
+				9B8393902C473CE20025A5C2 /* AddFavoriteResponse.swift in Sources */,
+				9B8393952C474AF50025A5C2 /* ToastItem.swift in Sources */,
 				9B4C8CD82C43DF30003AFD26 /* RestaurantsViewModel.swift in Sources */,
 				9B4C8CC42C43DAD3003AFD26 /* MyCyprusAppApp.swift in Sources */,
 				9B4C8CE72C43EBD1003AFD26 /* BaseResponse.swift in Sources */,
@@ -598,6 +610,14 @@
 				minimumVersion = 7.12.0;
 			};
 		};
+		9B8393912C4749A30025A5C2 /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -610,6 +630,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9B70D9362C46B46600877696 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		9B8393922C4749A30025A5C2 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B8393912C4749A30025A5C2 /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

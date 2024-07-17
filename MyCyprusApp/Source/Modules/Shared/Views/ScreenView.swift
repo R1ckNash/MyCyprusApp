@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SimpleToast
 
 struct ScreenView<Content>: View where Content: View {
     
@@ -24,6 +25,14 @@ struct ScreenView<Content>: View where Content: View {
                 Button("OK") { }
             } message: {
                 Text(model.alertItem?.message ?? "")
+            }
+            .simpleToast(isPresented: $model.isActiveToast, options: .init(alignment: .top, hideAfter: 1, modifierType: .slide)) {
+                Label(model.toastItem?.message ?? "", systemImage: "x.circle")
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(Color.white)
+                    .cornerRadius(10)
+                    .padding(.top)
             }
     }
 }

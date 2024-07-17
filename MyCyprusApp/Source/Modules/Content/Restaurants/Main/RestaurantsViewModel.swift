@@ -53,12 +53,29 @@ final class RestaurantsViewModel: BaseViewModel, ObservableObject {
         isFavoriteModeOn.toggle()
     }
     
-    func contains(_ restaurant: Restaurant) -> Bool {
-        favoriteRestaurantIds.contains(restaurant.id)
+    func contains(_ restaurantId: Int) -> Bool {
+        favoriteRestaurantIds.contains(restaurantId)
     }
     
-    func toggleFavorite(for restaurant: Restaurant) {
-        if let idx = restaurants.firstIndex(where: { $0.id == restaurant.id }) {
+    func toggleFavorite(for id: Int, isRequestNeeded: Bool = true) {
+        if contains(id) {
+            favoriteRestaurantIds.remove(id)
+            if isRequestNeeded {
+                Task {
+                    await removeFromFavorites(for: id)
+                }
+            }
+            
+        } else {
+            favoriteRestaurantIds.insert(id)
+            if isRequestNeeded {
+                Task {
+                    await addToFavorites(for: id)
+                }
+            }
+        }
+        
+        if let idx = restaurants.firstIndex(where: { $0.id == id }) {
             restaurants[idx].isFavorite.toggle()
             updateFilteredRestaurants()
         }
@@ -82,7 +99,6 @@ final class RestaurantsViewModel: BaseViewModel, ObservableObject {
     //MARK: - Private
     private func updateFilteredRestaurants() {
         favoriteRestaurantIds = Set(restaurants.filter { $0.isFavorite }.map { $0.id })
-        print(favoriteRestaurantIds.count)
     }
 }
 
@@ -93,11 +109,32 @@ extension RestaurantsViewModel {
         do {
             let response = try await self.api.fetchRestaurants()
             self.restaurants = .init(response.data ?? [])
-            
+            updateFilteredRestaurants()
             return true
         } catch {
             self.handle(error: error.localizedDescription, title: "Error while fetching restaurants")
-            
+            return false
+        }
+    }
+    
+    private func addToFavorites(for id: Int) async -> Bool {
+        do {
+            let _ = try await self.api.addToFavorites(for: id)
+            return true
+        } catch {
+            self.handle(error: error.localizedDescription)
+            toggleFavorite(for: id, isRequestNeeded: false)
+            return false
+        }
+    }
+    
+    private func removeFromFavorites(for id: Int) async -> Bool {
+        do {
+            try await self.api.removeFromFavorites(for: id)
+            return true
+        } catch {
+            self.handle(error: error.localizedDescription)
+            toggleFavorite(for: id, isRequestNeeded: false)
             return false
         }
     }

@@ -46,7 +46,7 @@ struct RestaurantItemView: View {
                     .font(.title3)
                 Spacer()
                 Button {
-                    model.toggleFavorite(for: item)
+                    model.toggleFavorite(for: item.id)
                 } label: {
                     Image(systemName: item.isFavorite ? "heart.fill" : "heart")
                         .foregroundStyle(.blue)
