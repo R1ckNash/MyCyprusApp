@@ -11,7 +11,7 @@ import Alamofire
 final class RestaurantRequests {
     
     let headers: HTTPHeaders = [
-        "Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQ1LCJleHAiOjE3MjEzNTMzNzJ9.jp1s88PCsQFFORZxTEcXBYX83dG2cGme_1Z2EFkmZ00",
+        "Authorization": "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQ1LCJleHAiOjE3MjIwMDE3NjB9.p-PePoXy7aFzMlGaLgEPzeJw4uLmIDwr5CwLxMkeAMs",
     ]
     
     func fetch() throws -> URLRequest {
